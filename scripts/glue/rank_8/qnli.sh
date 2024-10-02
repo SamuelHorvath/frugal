@@ -1,0 +1,31 @@
+python run_glue.py \
+    --output_dir qnli/ \
+    --model_name_or_path roberta-base \
+    --task_name qnli \
+    --do_train \
+    --do_eval \
+    --evaluation_strategy epoch \
+    --per_device_eval_batch_size 32 \
+    --logging_strategy steps \
+    --logging_steps 10 \
+    --max_seq_length 512 \
+    --save_total_limit 1 \
+    --gradient_accumulation_steps 2 \
+    --per_device_train_batch_size 128 \
+    --learning_rate 1e-4 \
+    --num_train_epochs 25 \
+    --optimizer frugal \
+    --warmup_ratio 0.06 \
+    --weight_decay 0.1 \
+    --fp16 \
+    --freeze_norms false \
+    --proj_params_lr_scale 1.0 \
+    --update_gap 500 \
+    --rank 8 \
+    --reset_statistics true \
+    --inactive_update_rule sign_sgd \
+    --inactive_lr_scale 0.1 \
+    --coord_choice columns \
+    --save_strategy epoch \
+    --report_to wandb \
+    --seed 0
