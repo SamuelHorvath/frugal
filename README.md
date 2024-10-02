@@ -11,7 +11,7 @@ pip install -r requirements.txt
 ## FRUGAL
 
 The source code for **FRUGAL** is located in the `frugal` directory. The file `proj_optimizer_templates.py` contains a template class for three types of projection: [Galore-like (Zhao et al., 2024)](https://arxiv.org/abs/2403.03507) SVD projection (GaloreOptimizer), RandK projection (CoordOptimizer), and BAdam-like [BAdam-like (Luo et al., 2024)](https://arxiv.org/abs/2404.02827) blockwise projection (BlockOptimizer). In the files `adamw.py`, `lion.py`, and `sgd.py`, both the original algorithms and **FRUGAL** versions are implemented with all types of projections, using these algorithms as state-full components.
-
+ 
 **FRUGAL** features several hyperparameters:
 
 - `proj_params_lr_scale`: A multiplier for the learning rate applied to projectable parameters. It is set to `1.0` in all main experiments.
