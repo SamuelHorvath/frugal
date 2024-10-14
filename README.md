@@ -32,7 +32,6 @@ Additionally, there are parameters specific to the types of projections:
 
 - For `BlockOptimizer`, the order of selecting state-free active transformer blocks can be specified. Options include `random`, `descending`, `ascending`, and `mirror`, with `random` as default value.
 
-
 ## How to run
 
 ### Pre-training experiments
